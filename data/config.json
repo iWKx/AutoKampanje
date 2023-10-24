@@ -1,0 +1,18 @@
+{
+  "target_program_title": "Shoppa - [expertg21] p\\u00e5 Expert Grimstad",
+  "power_butikk": "Power Grimstad",
+  "logo_path": "./data/pics/pwr.png",
+  "file_path": "./data/scan.txt",
+  "ico_path": "./data/pics/logo.ico",
+  "search_bar_path": "./data/pics/search_bar.png",
+  "info_bar_path": "./data/pics/info_bar.png",
+  "maler_path":"./data/pics/maler_button.png",
+  "search_plus_x": 40,
+  "search_plus_y": 35,
+  "info_plus_x": 25,
+  "info_plus_y": 8,
+  "delay_start": 1.2,
+  "pause_autogui": 0.4,
+  "x_width": 320,
+  "y_height": 550
+}
