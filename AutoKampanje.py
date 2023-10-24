@@ -158,7 +158,7 @@ def ready():
     pris_sjekk()
 
     ready_count = len(ean_array)
-    success_label.config(text=f"{ready_count} varer på kampanje & beholdning", fg="#24db4f")
+    success_label.config(text=f"{ready_count} varer på kampanje & lager", fg="#24db4f")
 
 
 def reset():
