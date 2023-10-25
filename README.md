@@ -1,8 +1,6 @@
 # AutoKampanje
 Automation for kampanje i Power
 
-url to download the program (https://bit.ly/AutoKampanje)  expires (22/11/2023)
-
 First look
 
 ![First look](https://github.com/iWKx/AutoKampanje/assets/97713241/c2477d3c-7e05-43a1-9179-f4509e04b4bb)
