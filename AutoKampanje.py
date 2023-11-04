@@ -259,12 +259,16 @@ def on_combobox_select(event):
     print(selected_value)
 
 def update_checkbox_label():
+    global bilde_status
     if checkbox_var.get():
         bilde.set("ja")
+        bilde_status = "ja"
         checkbox_label.config(text="Med bilde", fg="white")
     else:
         bilde.set("nei")
+        bilde_status = "nei"
         checkbox_label.config(text="Uten bilde", fg="white")
+    print(bilde_status)
 
 active_window = gw.getActiveWindow()
 screen_width, screen_height = pyautogui.size()
@@ -274,22 +278,21 @@ except:
     print("maler png")
 
 def main():
+    global bilde_status
+    print (bilde_status)
+    print (options[3])
     window_title = target_program_title 
     window = gw.getWindowsWithTitle(window_title)
-    active_window = gw.getActiveWindow()
 
-    if (len(ean_array)) < 1:
-        status_label.config(text="There is nothing to print!", fg="#d51f2f")
-            
     if window:
-            window = window[0]
-            window.activate()  
-            window.maximize()  
+        window = window[0]
+        window.activate()  
+        window.maximize()  
 
     active_window = gw.getActiveWindow()
 
     if active_window is None or active_window.title != target_program_title:
-        status_label.config(text="Start Shoppa !", fg="#d51f2f", font=(9))
+        status_label.config(text="Start Shoppa !", fg="#d51f2f", font=9)
         root.after(4000, hide_status_message)
 
     else:
@@ -319,7 +322,7 @@ def main():
             pyautogui.click(106,791)
         elif selected_value == options[3]:
             pyautogui.scroll(5000)
-            pyautogui.click(107,805)
+            pyautogui.click(109,860)
         elif selected_value == options[4]:
             pyautogui.scroll(5000)
             pyautogui.click(104,601)
@@ -364,7 +367,7 @@ def main():
             
             if selected_value == options[0] or selected_value == options[1] or selected_value == options[2]:
                 pyautogui.moveTo(1260,582)
-            elif selected_value == options[1]:
+            else:
                 pyautogui.moveTo(1071,770) 
         
             pyautogui.click()
@@ -609,7 +612,7 @@ options = ["Piggetikett", "Hyllekant", "Stor hyllekant", "Halv A4", "Stående A4
 selected_option = tk.StringVar()
 select_box = ttk.Combobox(frame_mal, textvariable=selected_option, values=options, state="readonly",width=12, style="Custom.TCombobox")
 select_box.grid(row=0, column=3, padx=5)
-select_box.set(options[0])
+select_box.set(options[3])
 selected_value=select_box.get()
 print(selected_value)
 select_box.bind("<<ComboboxSelected>>", on_combobox_select)
